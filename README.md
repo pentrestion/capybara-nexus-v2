@@ -14,11 +14,18 @@
 - `BENCHMARKS.md`: Comparative analysis against standard LLM security prompting.
 - `DISCLAIMER.md`: Legal and ethical usage guidelines.
 - `ATTACK_COVERAGE.md`: MITRE ATT&CK and OWASP Top 10 mapping.
+- `nexus_audit.py`: **[NEW]** The autonomous Python orchestrator for the Empirical Feedback Loop.
+- `gym/`: **[NEW]** Multi-language test cases (C, Go, Python) with the **Ablation Study**.
 
-## Installation
-1.  Copy `SKILL.md` to your Gemini CLI skills directory.
-2.  Activate with `activate_skill capybara-nexus-v2`.
-3.  Audit: Use the `[THREAT_MODEL_INFERENCE]` directive to begin an autonomous assessment.
+## Installation & Usage
+1.  **Installation:** Copy `SKILL.md` to your Gemini CLI skills directory.
+2.  **Activation:** Run `activate_skill capybara-nexus-v2`.
+3.  **Autonomous Audit:** Use the orchestrator to drive the reasoning loop:
+    ```bash
+    python3 nexus_audit.py /path/to/target/project
+    ```
+4.  **Proof of Power:** Explore the `gym/` directory to see why Capybara Nexus outperforms traditional scanners.
+
 
 ---
 *Inspired by the "Claude Mythos" model and Project Glasswing.*
