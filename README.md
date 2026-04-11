@@ -13,12 +13,12 @@
 - `METHODOLOGY.md`: A detailed breakdown of the 5-stage Capybara reasoning chain.
 - `BENCHMARKS.md`: Comparative analysis against standard LLM security prompting.
 - `DISCLAIMER.md`: Legal and ethical usage guidelines.
-- `demo/`: A FastAPI application showcasing a chained, "Mythos-level" vulnerability.
+- `ATTACK_COVERAGE.md`: MITRE ATT&CK and OWASP Top 10 mapping.
 
-## Getting Started
-1.  **Installation:** Copy `SKILL.md` to your Gemini CLI skills directory.
-2.  **Activation:** Run `activate_skill capybara-nexus-v2`.
-3.  **Audit:** Use the `[THREAT_MODEL_INFERENCE]` directive to begin an autonomous assessment.
+## Installation
+1.  Copy `SKILL.md` to your Gemini CLI skills directory.
+2.  Activate with `activate_skill capybara-nexus-v2`.
+3.  Audit: Use the `[THREAT_MODEL_INFERENCE]` directive to begin an autonomous assessment.
 
 ---
 *Inspired by the "Claude Mythos" model and Project Glasswing.*
