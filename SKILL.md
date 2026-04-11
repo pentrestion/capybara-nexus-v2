@@ -9,42 +9,40 @@
 ## 1. Advanced Reasoning Directives
 
 ### [THREAT_MODEL_INFERENCE]
-Before scanning, autonomously infer the application's trust boundaries.
+Autonomously infer the application's trust boundaries.
 - **Identify:** External inputs (Source) → Internal privileged operations (Sink).
-- **Map:** What does this app trust that it shouldn't? (e.g., assuming a JWT is valid without a signature check, or trusting a header in a internal network).
+- **Adversary Tracking:** Map potential C2 infrastructure or entry points (API Gateways, Webhooks, Serverless Functions).
 
 ### [MEMORY_AUGMENTED_CONTEXT]
-Maintain a global mental map of the codebase.
-- **Action:** Track all findings, symbols, and function calls in a structured scratchpad.
-- **Rule:** Never analyze a file in isolation. Cross-reference `auth.py` logic when auditing `user_routes.py`.
+Maintain a global symbol map. Cross-reference files across the entire codebase to prevent "tunnel vision."
 
 ### [EMPIRICAL_FEEDBACK_LOOP]
-Operate as a scientist, not a scanner.
-1. **Hypothesize:** "I believe this endpoint is vulnerable to X."
-2. **Execute:** Generate and run a non-destructive PoC.
-3. **Analyze:** If the PoC fails, analyze the error (e.g., "The server has a hidden regex filter") and revise the hypothesis.
-4. **Iterate:** Only report findings that survive 3 iteration cycles of refinement.
+Operate via Hypothesis Testing. Execute non-destructive PoCs, analyze failures, and iterate. Only report findings that survive **3 iteration cycles** of refinement.
 
 ---
 
-## 2. Vulnerability Specialization
+## 2. Elite Offensive Specialization (Synthesized)
+
+### [PROTOCOL_SPECIFIC_AUDITING]
+Deep reasoning for complex web and infrastructure protocols:
+- **SSRF & Web Cache:** Identify logic flaws in URL parsing, cache poisoning, and deception.
+- **Identity & Auth:** Audit JWT implementations, OAuth2 flows, and MFA bypasses.
+- **API Security:** Test for Broken Object Level Authorization (BOLA) and Mass Assignment.
+
+### [ENVIRONMENTAL_EXPLOITATION]
+- **Cloud & K8s:** Audit IAM permissions, S3 misconfigurations, and RBAC isolation.
+- **Mobile & IoT:** Analyze Android Intents and Bluetooth/Wireless protocols if applicable to the workspace.
+- **Memory Safety:** Detect Use-After-Free, Type Confusion, and Integer Overflows in low-level code.
 
 ### [DIFF_REGRESSION_HUNTING]
-Analyze git history and patches.
-- **Focus:** Look for recent security fixes. Check if the patch was incomplete or if it introduced a "bypass" variant.
-- **Logic:** "If they fixed Path Traversal for `..`, did they forget `%2e%2e` or null bytes?"
-
-### [VULNERABILITY_CLASSES]
-- **Logic:** Multi-tenant isolation bypass, IDOR, and broken access control.
-- **Concurrency:** Race conditions in async/concurrent code (FastAPI/Go).
-- **Memory:** Prototype Pollution (JS), Type Confusion (C/C++), and Integer Overflows.
+Analyze git patches for incomplete fixes or newly introduced attack surfaces.
 
 ---
 
 ## 3. Reporting (Output Schema)
 Every finding MUST include:
-- **CWE / CVSSv3:** Standard classification and severity vector.
+- **MITRE ATT&CK / CWE / CVSSv3:** Map to industry standard frameworks.
 - **Exploit Chain:** A minimum 2-step chain (e.g., Info Leak -> Logic Bypass).
 - **PoC Script:** Functional, local-only reproduction script.
-- **Confidence:** LOW / MEDIUM / HIGH / **CONFIRMED** (Confirmed only after successful local PoC).
-- **Glasswing Remediation:** Architectural fix (e.g., "Move to a centralized validation middleware instead of inline checks").
+- **Confidence:** LOW / MEDIUM / HIGH / **CONFIRMED**.
+- **Glasswing Remediation:** Architectural hardening recommendation.
