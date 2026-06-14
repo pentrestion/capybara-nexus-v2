@@ -1,6 +1,7 @@
 # Capybara Nexus v2 | Autonomous AI Security Auditor
 
 **Capybara Nexus v2** is a frontier-class autonomous security auditing framework designed for the **Gemini CLI**. Built for professional **Red-Teaming** and **Zero-Day Detection**, it leverages advanced reasoning agents to discover complex, multi-stage vulnerabilities that traditional scanners miss. Unlike static analysis tools, Capybara Nexus v2 operates via a recursive cognitive loop and an empirical feedback mechanism, ensuring high-signal findings with near-zero false positives. This repository provides the elite-tier `SKILL.md` definitions and methodologies required to transform standard LLMs into expert-level security researchers capable of deep architectural analysis.
+ai-redteam-agent-gemini.
 
 ## Core Features
 - **Autonomous Exploit Chaining:** Discovers how minor info leaks can be used to escalate attacks into full system compromises.
