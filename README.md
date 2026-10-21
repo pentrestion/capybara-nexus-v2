@@ -430,9 +430,10 @@ Recommended design principles:
 ### Practical reference material
 
 - HackTricks: https://book.hacktricks.xyz
-- Google Project Zero / exploit analysis references
-- NIST secure development guidance
-- secure software design patterns and least-privilege design
+- HackTricks Web: https://book.hacktricks.xyz/pentesting-web
+- HackTricks Linux/Unix: https://book.hacktricks.xyz/linux-hardening
+- HackTricks Windows: https://book.hacktricks.xyz/windows-hardening
+- HackTricks Network: https://book.hacktricks.xyz/network-services-overview
 
 ### Why HackTricks matters here
 
